@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th=https://www.thymeleaf.org>
+
+<head>
+  <meta charset="ISO-8859-1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  
+  <title> Index</title>
+</head>
+
+<body>
+  <nav class="navbar bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">Delivery Faster</a>
+      <form class="d-flex">
+        <button class="btn btn-outline-success" type="submit"><a th:href="@{/locale(language=en)}"
+            th:text=#{index.locale.en}> English </a></button>
+        <button class="btn btn-outline-success" type="submit"><a th:href="@{/locale(language=fr)}"
+            th:text=#{index.locale.fr}> French</a></button>
+        <button class="btn btn-outline-success" type="submit"><a th:href="@{/locale(language=es)}"
+            th:text=#{index.locale.es}> Spanish </button>
+      </form>
+
+    </div>
+  </nav>
+
+  <div class="card-columns">
+    <div class="card">
+      <img class="card-img-top" src="https://s03.s3c.es/imag/_v0/770x420/4/1/0/600x400_delivery-comida-domicilio-dreams.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h1>"Delivery Faster"</h1>
+        <h5 class="card-title" th:text=#{index.hello(${channel})}></h5>
+        <p th:text="#{index.welcome.message}"></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="img-thumbnail"src="https://enlacocina.b-cdn.net/wp-content/uploads/2019/04/Comida-a-domicilio.jpg">
+      <div class="card-body" >
+        <a href="/pedidos">
+        <h5 class="card-title" th:text=#{index.card.title}></h5>
+        <p class="card-text" th:text=#{index.card.message}></p>
+        <p class="card-text"><small class="text-muted" th:text=#{index.card.footer}></small></p>
+      </a>
+      </div>
+    </div>
+    <div class="card">
+     <div class="card-body" >
+        <a href="">
+        <h5 class="card-title" th:text=#{index.employe.title}></h5>
+        <p class="card-text" th:text=#{index.employe.body}></p>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+     <div class="card-body" >
+        <a href="">
+        <h5 class="card-title" th:text=#{index.productos.title}></h5>
+        <p class="card-text" th:text=#{index.productos.body}></p>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body" >
+         <a href="">
+         <h5 class="card-title" th:text=#{index.client.title}></h5>
+         <p class="card-text" th:text=#{index.client.body}></p>
+             </a>
+       </div>
+     </div>
+     <div class="card">
+      <div class="card-body" >
+         <a href="">
+         <h5 class="card-title" th:text=#{index.pago.title}></h5>
+         <p class="card-text" th:text=#{index.pago.title}></p>
+             </a>
+       </div>
+     </div>
+    
+  </div>
+
+  
+
+</body>
+
+</html>
